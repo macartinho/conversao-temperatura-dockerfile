@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: meupod
+spec:
+  containers:
+  - name: site
+    image: macartinho/conversao-temperatura:latest
+    ports:
+    - containerPort: 80
+  

@@ -1,0 +1,21 @@
+apiVersion: app/v1
+kind: ReplicaSet
+metadata:
+  name: meureplicaset
+spec:
+  selector:
+    matchLabels:
+      app: web
+  template: 
+
+metadata:
+  name: meupod
+labels: 
+  app: web
+spec:
+  containers:
+  - name: site
+    image: macartinho/conversao-temperatura:latest
+    ports:
+    - containerPort: 80
+  
